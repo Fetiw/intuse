@@ -14,6 +14,7 @@ if (sliderBlocks.length) {
       slidesPerView: 1,
       spaceBetween: 30,
       speed: 600,
+      loop: true,
       effect: 'slide',
       navigation: {
         nextEl: btnNext,
