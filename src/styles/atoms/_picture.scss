@@ -1,0 +1,10 @@
+.picture {
+  overflow: hidden;
+  aspect-ratio: 1.5;
+  display: flex;
+  flex-direction: column;
+
+  img {
+    @extend .img-cover;
+  }
+}

@@ -1,0 +1,35 @@
+.btn-circle {
+  --btn-color: var(--clr-blue);
+  --btn-color-hover: var(--clr-white);
+  --btn-bg: var(--clr-gold);
+  --btn-bg-hover: var(--clr-gold-action);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--btn-bg);
+  transition: background-color var(--transition), scale var(--transition);
+  scale: 1;
+
+  svg {
+    width: 50%;
+    aspect-ratio: 1;
+    transition: rotate var(--transition);
+  }
+
+  @media (hover: hover) {
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--btn-bg-hover);
+      scale: 1.1;
+
+      svg {
+        rotate: -15deg;
+      }
+    }
+  }
+}

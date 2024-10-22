@@ -1,0 +1,45 @@
+.breadcrumbs {
+  display: flex;
+  @include adaptive-value('margin-top', 30, 20);
+  @include adaptive-value('margin-bottom', 30, 20);
+  @include adaptive-value('font-size', 12, 12);
+
+  a {
+    opacity: .8;
+
+    @media (hover: hover) {
+      transition: opacity var(--transition);
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .current-item {
+    opacity: 1;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+
+    & > * + * {
+      position: relative;
+      padding-left: 10px;
+      margin-left: 10px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%) translateX(-50%);
+        width: 3px;
+        border-radius: 50%;
+        aspect-ratio: 1;
+        background-color: currentColor;
+      }
+    }
+  }
+}

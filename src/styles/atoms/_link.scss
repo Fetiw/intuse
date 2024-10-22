@@ -1,0 +1,15 @@
+.link,
+a {
+  color: var(--clr-blue);
+  text-decoration: none;
+
+  &:not([class]) {
+    @media (hover: hover) {
+      transition: opacity var(--transition), color var(--transition);
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+}

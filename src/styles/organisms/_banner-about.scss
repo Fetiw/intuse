@@ -1,0 +1,37 @@
+.banner-about {
+  background-color: var(--clr-white);
+  color: var(--clr-blue);
+  gap: 30px;
+  @include adaptive-value('padding-bottom', 120, 34);
+
+  @include breakpoint('lg') {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 150px;
+    aspect-ratio: 149 / 179;
+
+    @include breakpoint('lg') {
+      order: -1;
+      width: 268px;
+    }
+
+    svg {
+      width: 100%;
+      aspect-ratio: 149 / 179;
+    }
+  }
+}

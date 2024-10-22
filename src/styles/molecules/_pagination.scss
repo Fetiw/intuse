@@ -1,0 +1,49 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  &__btn {
+    display: flex;
+
+    svg {
+      width: 24px;
+      aspect-ratio: 24 / 12;
+    }
+
+    @media (hover: hover) {
+      cursor: pointer;
+      transition: opacity var(--transition);
+
+      &:not([disabled]):hover {
+        opacity: .7;
+      }
+    }
+
+    &[disabled] {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 22px;
+
+    li > * {
+      color: var(--clr-gray-second);
+      transition: color var(--transition);
+      font-family: var(--family-second), sans-serif;
+
+      &:hover {
+        color: hsl( from var(--clr-blue-second) h s l / .7);
+      }
+    }
+
+    li.is-active > * {
+      color: var(--clr-blue-second);
+    }
+  }
+}

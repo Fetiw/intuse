@@ -1,0 +1,51 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    position: relative;
+  }
+
+  &__top {
+    font-weight: 400;
+
+    @include breakpoint('lg') {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+
+  &__middle {
+    font-family: var(--family-second), sans-serif;
+    @include adaptive-value('font-size', 300, 130);
+
+    span {
+      color: var(--clr-gold);
+    }
+  }
+
+  &__bot {
+    @include breakpoint('lg') {
+      position: absolute;
+      left: 1%;
+      bottom: 20%;
+    }
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,79 @@
+.swiper-block {
+  --btn-width: 21px;
+  --btn-height: 18px;
+  --gap: 10px;
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  opacity: 0;
+  transition: opacity 400ms linear;
+
+  &.is-init {
+    transition-delay: 200ms;
+    opacity: 1;
+  }
+
+  @include breakpoint("lg") {
+    --btn-width: 37px;
+    --btn-height: 18px;
+    --gap: 35px;
+  }
+
+
+  &[data-swiper="content"] {
+    --gap: 15px;
+
+    flex-direction: column;
+  }
+
+  &[data-swiper="event"] {
+    display: grid;
+    grid-template-columns: auto repeat(1, minmax(0, 1fr)) auto;
+  }
+
+  &__slider {
+    width: 100%;
+    display: grid;
+    overflow-x: clip;
+  }
+
+  &__btn {
+    transition: opacity var(--transition);
+    flex: none;
+    cursor: pointer;
+
+    svg {
+      width: var(--btn-width);
+      height: var(--btn-height);
+    }
+
+    .desk {
+      display: none;
+
+      @include breakpoint('lg') {
+        display: flex;
+      }
+    }
+
+    .mob {
+      display: flex;
+
+      @include breakpoint('lg') {
+        display: none;
+      }
+    }
+
+    &.swiper-button-disabled {
+      opacity: .5;
+      cursor: not-allowed;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    gap: 20px;
+  }
+}
+

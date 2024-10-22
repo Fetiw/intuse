@@ -1,0 +1,41 @@
+<extends src="layouts/main.html" locals='{"bodyClasses": "fixed-header"}'>
+	<block name="main">
+		<include src="html/sections/_banner-about.html"></include>
+
+		<section class="container section-home section-logo">
+			<div class="block">
+				<h2 class="h2 text-center">
+					У рамках асоціації проводяться
+				</h2>
+
+				<div class="block__grid block__grid--3">
+					<include src="html/items/_item-info.html"></include>
+					<include src="html/items/_item-info.html"></include>
+					<include src="html/items/_item-info.html"></include>
+				</div>
+			</div>
+
+			<div class="block">
+				<div class="block__grid">
+					<include src="html/blocks/_slider-about.html"></include>
+				</div>
+
+				<div class="block__text">
+					MAI проводить читацькі класи для вивчення та обговорення класичної та новітньої психологічної
+					літератури. Шляхом консолідації знань у сфері психології та психоаналізу ми прагнемо визначити
+					проблемні області та віднайти нові нестандартні методи ефективного розвʼязання питань, з якими
+					стикається сучасний психолог.
+
+					Ми створюємо інтервізійні групи, що модеруються дипломованими міжнародними психологами та
+					психоаналітиками та пропонуємо послуги дипломованих супервізорів з багаторічним стажем.
+				</div>
+
+				<div class="block__action">
+					<a href="" class="btn btn--clip">
+						Приєднатися
+					</a>
+				</div>
+			</div>
+		</section>
+	</block>
+</extends>

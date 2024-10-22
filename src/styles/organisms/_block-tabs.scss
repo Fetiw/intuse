@@ -1,0 +1,60 @@
+.block-tabs {
+  display: flex;
+  flex-direction: column;
+  @include adaptive-value('row-gap', 45, 32);
+
+  &__tags {
+    display: grid;
+    overflow-x: auto;
+    grid-auto-flow: column;
+    width: 100vw;
+    margin-inline: calc(var(--page-space) * -1);
+    padding-inline: var(--page-space);
+    gap: 10px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    @include breakpoint('lg') {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-inline: initial;
+      padding-inline: initial;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .btn-tag {
+      padding-inline: 20px;
+      @include adaptive-value('width', 160, 140);
+    }
+  }
+
+  &__contents {
+    display: grid;
+    align-items: flex-start;
+
+    & > * {
+      display: none;
+      transition: opacity var(--transition);
+      @include adaptive-value('column-gap', 20, 20);
+      @include adaptive-value('row-gap', 30, 25);
+
+      @include breakpoint('md') {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      &.is-active {
+        display: grid;
+      }
+    }
+
+    &--3 > * {
+      @include breakpoint('md') {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}

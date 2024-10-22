@@ -1,0 +1,12 @@
+.map {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  aspect-ratio: 561 / 284;
+  background-color: var(--clr-gray);
+  clip-path: polygon(10% 0, 100% 0, 100% calc(100% - 25%), calc(100% - 10%) 100%, 0 100%, 0 25%);
+
+  & > * {
+    scale: 1.15;
+  }
+}

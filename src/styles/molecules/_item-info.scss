@@ -1,0 +1,44 @@
+.item-info {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-blue-second);
+  clip-path: polygon(100% 0, 100% calc(100% - 40px), calc(100% - 20px) 100%, 0 100%, 0 0);
+  transition: background-color var(--transition);
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--clr-blue);
+    }
+
+    &:hover & {
+      &__picture img {
+        scale: 1.05;
+      }
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    aspect-ratio: 288 / 92;
+    min-height: 92px;
+    overflow: hidden;
+
+    img {
+      transition: scale var(--transition);
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--family-second), sans-serif;
+    text-align: center;
+    color: var(--clr-white);
+    padding-block: 26px;
+    padding-inline: 20%;
+    text-transform: uppercase;
+    min-height: 96px;
+    @include adaptive-value('font-size', 16, 16);
+  }
+}

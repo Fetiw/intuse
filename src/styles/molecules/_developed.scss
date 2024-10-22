@@ -1,0 +1,29 @@
+.developed {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+
+  &__title {
+    font-size: 11px;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    color: hsl(from var(--clr-black) h s l / .5);
+
+    @media (hover: hover) {
+      transition: color var(--transition);
+
+      &:hover {
+        color: hsl(from var(--clr-black) h s l / 1);
+      }
+    }
+
+    svg {
+      width: 48px;
+      aspect-ratio: 48 / 8;
+    }
+  }
+}

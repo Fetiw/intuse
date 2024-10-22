@@ -1,0 +1,51 @@
+.item-event {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-blue-second);
+  color: var(--clr-white);
+  clip-path: polygon(100% 0, 100% calc(100% - 40px), calc(100% - 20px) 100%, 0 100%, 0 0);
+  transition: background-color var(--transition);
+  
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--clr-blue);
+
+      picture img {
+        scale: 1.05;
+      }
+    }
+  }
+
+  picture {
+    aspect-ratio: 252 / 68;
+    overflow: hidden;
+
+    img {
+      transition: scale var(--transition);
+    }
+  }
+
+  &__main {
+    padding-block: 20px;
+    padding-left: 24px;
+    padding-right: 20%;
+    display: flex;
+    flex-direction: column;
+    @include adaptive-value('gap', 18, 18);
+  }
+
+  &__name {
+    @include adaptive-value('font-size', 16, 16);
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    @include adaptive-value('font-size', 10, 10);
+
+    span {
+      text-transform: uppercase;
+    }
+  }
+}

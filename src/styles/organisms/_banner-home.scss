@@ -1,0 +1,46 @@
+.banner-home {
+  background-color: var(--clr-white);
+  color: var(--clr-blue);
+  @include adaptive-value('padding-bottom', 100, 54);
+
+  &__wrapper {
+    display: grid;
+    @include adaptive-value('row-gap', 44, 32);
+
+    @include breakpoint('lg') {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto 1fr;
+      align-items: flex-start;
+    }
+  }
+
+  &__picture {
+    width: 100%;
+    aspect-ratio: 515 / 355;
+    clip-path: polygon(10% 0%, 100% 0, 100% 70%, 90% 100%, 0 100%, 0% 30%);
+
+    @include breakpoint('lg') {
+      grid-row: 1 / 3;
+      grid-column-start: 2;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    text-align: center;
+
+    @include breakpoint('lg') {
+      text-align: initial;
+    }
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint('lg') {
+      justify-content: flex-start;
+    }
+  }
+}

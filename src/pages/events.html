@@ -1,0 +1,45 @@
+<extends src="layouts/main.html" locals='{"bodyClasses": "bg-white"}'>
+	<block name="main">
+		<include src="html/blocks/_breadcrumbs.html"></include>
+
+		<section class="container container--page">
+			<div class="block">
+				<h2 class="h2 text-center">
+					Наші події
+				</h2>
+
+				<div class="block__grid block-tabs" data-tabs>
+					<div class="block-tabs__tags">
+						<button type="button" class="btn-tag is-active" data-tab="1">
+							Для психологів
+						</button>
+						<button type="button" class="btn-tag" data-tab="2">
+							Для інших фахівців
+						</button>
+						<button type="button" class="btn-tag" data-tab="3">
+							Читацькці класи
+						</button>
+					</div>
+
+					<div class="block-tabs__contents block-tabs__contents--3">
+						<div class="block-tabs__content is-active" data-tab-content="1">
+							<include src="html/items/_item-event.html"></include>
+							<include src="html/items/_item-event.html"></include>
+							<include src="html/items/_item-event.html"></include>
+						</div>
+						<div class="block-tabs__content" data-tab-content="2">
+							<include src="html/items/_item-event.html"></include>
+							<include src="html/items/_item-event.html"></include>
+							<include src="html/items/_item-event.html"></include>
+							<include src="html/items/_item-event.html"></include>
+						</div>
+						<div class="block-tabs__content" data-tab-content="3">
+							<include src="html/items/_item-event.html"></include>
+							<include src="html/items/_item-event.html"></include>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</block>
+</extends>

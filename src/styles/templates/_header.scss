@@ -1,0 +1,77 @@
+.fixed-header {
+  .header {
+    @include breakpoint('lg') {
+      background-color: transparent;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      transition: background-color var(--transition);
+
+      &.is-scrolled {
+        background-color: var(--clr-white);
+      }
+    }
+  }
+
+  .main {
+    section:first-child {
+      padding-top: 30px;
+
+      @include breakpoint('lg') {
+        padding-top: calc(var(--header-height) + 60px);
+      }
+
+      @include breakpoint('lgx') {
+        padding-top: calc(var(--header-height) + 120px);
+      }
+    }
+  }
+}
+
+.header {
+  background-color: var(--clr-white);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 15px;
+  padding-block: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  @include breakpoint('lg') {
+    padding-block: 18px;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__logo {
+    .logo {
+      height: 44px;
+    }
+  }
+
+  .menu {
+    display: none;
+
+    @include breakpoint('lg') {
+      display: flex;
+    }
+  }
+
+  &__action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .btn-menu {
+    margin-right: calc(var(--page-space) * -1);
+    padding-right: var(--page-space);
+
+    @include breakpoint('lg') {
+      display: none;
+    }
+  }
+}

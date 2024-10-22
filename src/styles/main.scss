@@ -1,0 +1,52 @@
+@import 'swiper/css';
+@import 'swiper/css/effect-fade';
+@import 'glightbox/dist/css/glightbox.css';
+
+@import "helpers/main";
+
+@import "atoms/input";
+@import "atoms/logo";
+@import "atoms/button";
+@import "atoms/btn-circle";
+@import "atoms/btn-tag";
+@import "atoms/btn-menu";
+@import "atoms/link";
+@import "atoms/typography";
+@import "atoms/clip";
+@import "atoms/language";
+@import "atoms/picture";
+@import "atoms/section-logo";
+
+@import "molecules/item-count";
+@import "molecules/item-info";
+@import "molecules/item-text";
+@import "molecules/item-session";
+@import "molecules/item-event";
+@import "molecules/item-course";
+@import "molecules/item-advantages";
+@import "molecules/menu";
+@import "molecules/developed";
+@import "molecules/map";
+@import "molecules/pagination";
+
+@import "organisms/swiper";
+@import "organisms/block-tabs";
+@import "organisms/block-navigation";
+@import "organisms/block-form";
+@import "organisms/form-success";
+@import "organisms/banner-home";
+@import "organisms/banner-about";
+@import "organisms/menu-mobile";
+@import "organisms/cookie";
+@import "organisms/breadcrumbs";
+@import "organisms/modal";
+@import "organisms/glightbox";
+
+@import "templates/block";
+@import "templates/footer";
+@import "templates/header";
+@import "templates/section-home";
+@import "templates/inner-content";
+
+@import "pages/contacts";
+@import "pages/not-found";

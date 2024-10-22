@@ -1,0 +1,43 @@
+<extends src="layouts/main.html" locals='{"bodyClasses": "bg-white"}'>
+	<block name="main">
+		<include src="html/blocks/_breadcrumbs.html"></include>
+
+		<section class="container container--page">
+			<div class="contacts">
+				<div class="contacts__map">
+					<div class="map" data-lat="50.400177" data-lng="30.635015"></div>
+				</div>
+
+				<div class="contacts__main">
+					<ul class="contacts__socials">
+						<li>
+							<a href="">Інстаграм</a>
+						</li>
+						<li>
+							<a href="">Лінкедін</a>
+						</li>
+					</ul>
+
+					<ul class="footer__contact">
+						<li>
+							<a href="tel:+31627447821">
+								+31627447821
+							</a>
+						</li>
+						<li>
+							<a href="mailto:email@outlook.com ">
+								email@outlook.com
+							</a>
+						</li>
+					</ul>
+
+					<div>
+						<button type="button" class="btn btn--clip">
+							Долучитись
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</block>
+</extends>

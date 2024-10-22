@@ -1,0 +1,25 @@
+.item-advantages {
+  background-color: var(--clr-blue-second);
+  clip-path: polygon(30px 0%, 100% 0, 100% 100%, 0 100%, 0% 50px);
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    @include adaptive-value('padding-top', 25, 25);
+    @include adaptive-value('padding-bottom', 20, 20);
+    @include adaptive-value('padding-inline', 30, 30);
+  }
+
+  &__name {
+    @include adaptive-value('font-size', 16, 16)
+  }
+
+  &__picture {
+    aspect-ratio: 107 / 144;
+    overflow: hidden;
+    min-width: 108px;
+    height: 100%;
+  }
+}

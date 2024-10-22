@@ -1,0 +1,19 @@
+.block-navigation {
+  display: flex;
+  flex-direction: column;
+  gap:  25px;
+
+  &__navigation {
+    display: flex;
+    gap: 15px;
+
+    li {
+      display: inline-flex;
+    }
+
+    a {
+      text-decoration: underline;
+      @include adaptive-value('font-size', 10, 10);
+    }
+  }
+}

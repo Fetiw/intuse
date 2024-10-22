@@ -1,0 +1,40 @@
+.h1 {
+  font-weight: 500;
+  font-family: var(--family-second);
+  text-transform: uppercase;
+  @include adaptive-value('font-size', 44, 22);
+}
+
+.h2 {
+  font-weight: 500;
+  font-family: var(--family-second);
+  text-transform: uppercase;
+  @include adaptive-value('font-size', 33, 22);
+
+  span {
+    color: var(--clr-gold);
+  }
+}
+
+.text {
+
+  &-center {
+    text-align: center;
+  }
+
+  &-white {
+    color: var(--clr-white);
+  }
+
+  &-blue {
+    color: var(--clr-blue);
+  }
+
+  &-gold {
+    color: var(--clr-gold);
+  }
+
+  &-second {
+    font-family: var(--family-second), sans-serif;
+  }
+}

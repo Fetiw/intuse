@@ -1,0 +1,33 @@
+.btn-tag {
+  --btn-color: var(--clr-white);
+  --btn-color-active: var(--clr-blue);
+  --btn-bg: var(--clr-gold);
+  --btn-bg-hover: var(--clr-gold-action);
+
+  color: var(--btn-color);
+  background-color: var(--clr-blue);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1;
+  font-weight: 500;
+  justify-content: center;
+  padding-inline: 20px;
+  transition: opacity var(--transition), background-color var(--transition);
+  @include adaptive-value('font-size', 14, 14);
+  @include adaptive-value('min-height', 62, 46);
+  @include adaptive-value('max-width', 210, 150);
+
+  @media (hover: hover) {
+    cursor: pointer;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &.is-active {
+    background-color: var(--btn-bg);
+    color: var(--btn-color-active);
+  }
+}

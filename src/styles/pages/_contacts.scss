@@ -1,0 +1,39 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  @include breakpoint('lg') {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+  }
+
+  &__map {
+    margin-inline: calc(var(--page-space) / 2 * -1);
+
+    @include breakpoint('lg') {
+      margin-inline: initial;
+      order: 1;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+
+    @include breakpoint('lg') {
+      padding-inline: 10%;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 14px;
+
+    a {
+      font-size: 14px;
+    }
+  }
+}

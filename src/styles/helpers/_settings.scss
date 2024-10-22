@@ -1,0 +1,11 @@
+$widthDesign: 1280;
+$maxWidthContainer: 1600;
+$minContainer: 375;
+
+$breakpoints: (
+  'sm': 380px,
+  'md': 768px,
+  'lg': 1024px,
+  'lgx': 1280px,
+  'xl': 1600px,
+) !default;

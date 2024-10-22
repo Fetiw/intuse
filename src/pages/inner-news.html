@@ -1,0 +1,53 @@
+<extends src="layouts/main.html" locals='{"bodyClasses": "bg-white"}'>
+	<block name="main">
+		<include src="html/blocks/_breadcrumbs.html"></include>
+
+		<section class="container container--page">
+			<div class="inner-content">
+				<div class="inner-content__date">
+					25.02.2025
+				</div>
+
+				<div class="inner-content__picture">
+					<img src="/images/content/1.webp" alt="Picture Study" class="img-cover">
+
+					<div class="inner-content__info">
+						<span class="inner-content__name">назва навчальної програми</span>
+
+						<button type="button" class="btn btn--clip" data-modal-open="modal-form">
+							Приєднатися
+						</button>
+					</div>
+				</div>
+
+				<div class="inner-content__main">
+					<h2 class="inner-content__title">
+						Івент
+					</h2>
+
+					<div class="inner-content__date">
+						25.02.2025
+					</div>
+
+					<div class="inner-content__description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia tristique cursus. In
+						rutrum
+						ipsum ac dictum placerat. Nam ac eleifend orci, in eleifend mauris. Phasellus sit amet neque
+						magna. Ut eu fringilla ipsum. Donec faucibus in mi sit amet aliquet. Vestibulum gravida
+					</div>
+
+					<div class="inner-content__slider">
+						<include src="html/blocks/_slider-about.html"></include>
+					</div>
+
+					<div class="inner-content__description">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia tristique cursus. In
+						rutrum
+						ipsum ac dictum placerat. Nam ac eleifend orci, in eleifend mauris. Phasellus sit amet neque
+						magna. Ut eu fringilla ipsum. Donec faucibus in mi sit amet aliquet. Vestibulum gravida
+					</div>
+				</div>
+			</div>
+		</section>
+	</block>
+</extends>

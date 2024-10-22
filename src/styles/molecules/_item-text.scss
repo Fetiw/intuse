@@ -1,0 +1,25 @@
+.item-text {
+  --clr-text: var(--clr-white);
+
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: .2;
+  @include adaptive-value('font-size', 27, 18);
+
+  &.is-init {
+    transition: opacity var(--transition);
+    opacity: 1;
+  }
+
+  b {
+    color: var(--clr-gold);
+  }
+
+  span {
+    opacity: .25;
+  }
+
+  &--small {
+    @include adaptive-value('font-size', 22, 14);
+  }
+}

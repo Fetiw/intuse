@@ -1,0 +1,10 @@
+.section-home {
+  display: grid;
+  @include adaptive-value('gap', 100, 85);
+  @include adaptive-value('padding-block', 100, 60);
+
+  &--white {
+    background-color: var(--clr-white);
+    color: var(--clr-blue);
+  }
+}

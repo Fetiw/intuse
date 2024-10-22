@@ -1,0 +1,155 @@
+<extends src="layouts/main.html" locals='{"bodyClasses": "fixed-header"}'>
+	<block name="main">
+		<include src="html/sections/_banner-home.html"></include>
+
+		<section class="container section-home section-logo">
+			<div class="item-text text-second container--small">
+				Міжнародна асоціація Інтус надає активну підтримку науковим інтересам. Метою асоціації є не
+				тільки
+				фахове зростання наших членів, а й обмін професійним досвідом через участь у науково-дослідних
+				конференціях національного та міжнародного рівня.
+			</div>
+
+			<div class="block">
+				<h2 class="h2 text-center">
+					У рамках асоціації <br> <span>проводяться</span>
+				</h2>
+
+				<div class="block__grid block__grid--3">
+					<include src="html/items/_item-info.html"></include>
+					<include src="html/items/_item-info.html"></include>
+					<include src="html/items/_item-info.html"></include>
+				</div>
+			</div>
+
+			<div class="block">
+				<h2 class="h2 text-center">
+					Члени MAI користуються <br> такими <span>перевагами</span>
+				</h2>
+
+
+				<div class="block__grid block__grid--3">
+					<include src="html/items/_item-count.html"></include>
+					<include src="html/items/_item-count.html"></include>
+					<include src="html/items/_item-count.html"></include>
+				</div>
+
+				<div class="block__text">
+					Ми пропонуємо членство фахівцям різного рівня. На якому б етапі своєї карʼєри ви не перебували, ви
+					знайдете підтримку, ресурси та ініціативи, які допоможуть вам покращити якість послуг, які ви
+					надаєте
+					своїм клієнтам.
+				</div>
+
+				<div class="block__action">
+					<a href="" class="btn btn--clip">
+						Приєднатися
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="container section-home section-home--white clip-container">
+			<div class="block">
+				<h2 class="h2 text-center">
+					Навчальні програми
+				</h2>
+
+				<div class="block__grid block-tabs" data-tabs>
+					<div class="block-tabs__tags">
+						<button type="button" class="btn-tag is-active" data-tab="1">
+							Для психологів
+						</button>
+						<button type="button" class="btn-tag" data-tab="2">
+							Для інших фахівців
+						</button>
+						<button type="button" class="btn-tag" data-tab="3">
+							Читацькці класи
+						</button>
+					</div>
+
+					<div class="block-tabs__contents">
+						<div class="block-tabs__content is-active" data-tab-content="1">
+							<include src="html/items/_item-course.html"></include>
+							<include src="html/items/_item-course.html"></include>
+							<include src="html/items/_item-course.html"></include>
+						</div>
+						<div class="block-tabs__content" data-tab-content="2">
+							<include src="html/items/_item-course.html"></include>
+							<include src="html/items/_item-course.html"></include>
+							<include src="html/items/_item-course.html"></include>
+							<include src="html/items/_item-course.html"></include>
+						</div>
+						<div class="block-tabs__content" data-tab-content="3">
+							<include src="html/items/_item-course.html"></include>
+							<include src="html/items/_item-course.html"></include>
+						</div>
+					</div>
+				</div>
+
+				<div class="block__action">
+					<a href="" class="btn btn--border text-second">
+						дивитись всі
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="container section-home">
+			<div class="block">
+				<h2 class="h2 text-center">
+					Групові сессії
+				</h2>
+
+				<div class="block__grid block__grid--2">
+					<include src="html/items/_item-session.html"></include>
+					<include src="html/items/_item-session.html"></include>
+				</div>
+			</div>
+
+			<div class="block">
+				<h2 class="h2 text-center">
+					події
+				</h2>
+
+				<div class="swiper-block" data-swiper="event">
+					<div class="swiper-button-prev swiper-block__btn">
+						<svg class="desk">
+							<use href="/images/sprite.svg#icon-arrow-left"></use>
+						</svg>
+
+						<svg class="mob">
+							<use href="/images/sprite.svg#icon-arrow-mob-left"></use>
+						</svg>
+					</div>
+
+					<div class="swiper-block__slider">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<include src="html/items/_item-event.html"></include>
+							</div>
+							<div class="swiper-slide">
+								<include src="html/items/_item-event.html"></include>
+							</div>
+							<div class="swiper-slide">
+								<include src="html/items/_item-event.html"></include>
+							</div>
+							<div class="swiper-slide">
+								<include src="html/items/_item-event.html"></include>
+							</div>
+						</div>
+					</div>
+
+					<div class="swiper-button-next swiper-block__btn">
+						<svg class="desk">
+							<use href="/images/sprite.svg#icon-arrow-right"></use>
+						</svg>
+						<svg class="mob">
+							<use href="/images/sprite.svg#icon-arrow-mob-right"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</section>
+	</block>
+</extends>

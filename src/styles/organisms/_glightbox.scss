@@ -1,0 +1,91 @@
+.glightbox-container {
+  .goverlay {
+    background: linear-gradient(180deg, var(--clr-white) 0%, var(--clr-white) 50%, var(--clr-blue-second) 50%, var(--clr-blue-second) 100%);
+  }
+
+  .gslider {
+    width: calc(100% - (var(--page-space) * 2));
+    margin-inline: auto;
+  }
+
+  .gslide-media {
+    box-shadow: none;
+  }
+
+  .gclose {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    padding-block: 12px;
+    padding-inline: 25px;
+    background-color: var(--clr-gold);
+    clip-path: polygon(15px 0%, 100% 0, 100% 100%, 0 100%, 0% 15px);
+    right: 0;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+
+    svg {
+      width: 20px;
+
+      path {
+        fill: var(--clr-blue-second);
+      }
+    }
+
+    @media (hover: hover) {
+      cursor: pointer;
+      transition: background-color var(--transition);
+
+      &:hover {
+        background-color: var(--clr-gold-action);
+      }
+    }
+  }
+
+  .gslide-image img {
+    max-height: calc(100vh - (var(--page-space) * 2));
+    height: auto;
+
+    @include breakpoint('lg') {
+      max-height: calc(100vh - (var(--page-space) * 2));
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    bottom: var(--page-space);
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+
+    @include breakpoint('lg') {
+      bottom: calc(var(--page-space) / 2);
+    }
+  }
+
+  &.glightbox-clean {
+    .gnext,
+    .gprev {
+      position: relative;
+      inset: auto;
+      color: var(--clr-white);
+      width: 37px;
+      height: 18px;
+      background-color: transparent;
+      transition: opacity var(--transition);
+
+      @media (hover: hover) {
+        background-color: transparent;
+      }
+
+      svg {
+        width: 37px;
+        height: 18px;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.form-success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+
+  &__title {
+    text-align: center;
+    font-size: 19px;
+    font-weight: 700;
+    font-family: var(--font-second), sans-serif;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: center;
+
+    .btn {
+      min-width: 200px;
+    }
+  }
+}

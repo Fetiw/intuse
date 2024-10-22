@@ -1,0 +1,31 @@
+.item-course {
+  background-color: var(--clr-blue-second);
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  clip-path: polygon(100% 0, 100% 100%, 40px 100%, 0% calc(100% - 50px), 0 0);
+
+  @include breakpoint('md') {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    @include adaptive-value('padding-top', 30, 30);
+    @include adaptive-value('padding-right', 20, 20);
+    @include adaptive-value('padding-bottom', 20, 20);
+    @include adaptive-value('padding-left', 30, 30);
+    @include adaptive-value('gap', 6, 6);
+  }
+
+  &__name {
+    font-weight: 700;
+    color: var(--clr-white);
+    text-transform: uppercase;
+    @include adaptive-value('font-size', 19, 19);
+  }
+
+  .btn-circle {
+    margin-left: auto;
+  }
+}

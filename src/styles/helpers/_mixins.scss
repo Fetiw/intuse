@@ -1,0 +1,28 @@
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin adaptive-value($property, $startSize, $minSize) {
+  & {
+    $addSize: $startSize - $minSize;
+    $addSizeTwo: $startSize * 1.2 - $startSize;
+
+    #{$property}: calc(#{$startSize} * 1.2 * 1px);
+
+    @media (max-width: #{$maxWidthContainer + px}) {
+      #{$property}: calc(#{$startSize + px} + #{$addSizeTwo} * ((100vw - #{$widthDesign + px}) / #{$maxWidthContainer - $widthDesign}));
+    }
+
+    @media (max-width: #{$widthDesign + px}) {
+      #{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minContainer + px}) / #{$widthDesign - $minContainer}));
+    }
+  }
+}
+

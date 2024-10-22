@@ -1,0 +1,14 @@
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  font-size: 14px;
+  line-height: 1;
+  color: var(--clr-blue);
+  padding: 28px;
+  width: 100%;
+  border: 2px solid var(--clr-mercury);
+
+  &::placeholder {
+    color: var(--clr-blue);
+  }
+}

@@ -1,0 +1,20 @@
+<extends src="layouts/main.html" locals='{"bodyClasses": "bg-white"}'>
+	<block name="main">
+		<include src="html/blocks/_breadcrumbs.html"></include>
+
+		<section class="container container--page">
+			<div class="block">
+				<h2 class="h2 text-center">
+					Групові сессії
+				</h2>
+
+				<div class="block__grid block__grid--2">
+					<include src="html/items/_item-session-group.html"></include>
+					<include src="html/items/_item-session-group.html"></include>
+					<include src="html/items/_item-session-group.html"></include>
+					<include src="html/items/_item-session-group.html"></include>
+				</div>
+			</div>
+		</section>
+	</block>
+</extends>

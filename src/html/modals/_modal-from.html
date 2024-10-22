@@ -1,0 +1,59 @@
+<dialog id="modal-form">
+	<div class="modal" data-modal-container="up">
+
+		<button class="modal__close btn-menu is-active" data-modal-close>
+			<span class="btn-menu__wrapper">
+				<span class="btn-menu__line"></span>
+				<span class="btn-menu__line"></span>
+				<span class="btn-menu__line"></span>
+			</span>
+		</button>
+
+		<div class="modal__main">
+			<div class="block-form">
+				<div class="block-form__title">
+					Щоб продовжити запис на курс, залиште свої дані.
+				</div>
+
+				<form class="block-form__form">
+					<div class="block-form__main-form">
+						<div class="form-group">
+							<label class="input">
+								<input type="text" placeholder="Введіть ім’я*" required name="name">
+							</label>
+						</div>
+						<div class="form-group">
+							<label class="input">
+								<input type="text" placeholder="Введіть email*" required name="email">
+							</label>
+						</div>
+					</div>
+
+					<div class="block-form__action">
+						<button type="submit" class="btn btn--clip">
+							Надіслати
+						</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="form-success">
+				<div class="form-success__icon">
+					<svg>
+						<use href="/images/sprite.svg#icon-logo"></use>
+					</svg>
+				</div>
+
+				<div class="form-success__title">
+					Ви успішо відправили заявку, ми дуже скоро зв’яжемось з вами.
+				</div>
+
+				<div class="form-success__action">
+					<button type="button" class="btn btn--clip" data-modal-close>
+						ОК
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</dialog>
