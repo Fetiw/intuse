@@ -4,7 +4,10 @@ const buttonModals = document.querySelectorAll('[data-modal-open]');
 
 if (buttonModals.length) {
   buttonModals.forEach(button => {
-    button.onclick = ({ currentTarget }) => {
+    button.onclick = (event) => {
+      event.preventDefault();
+
+      const currentTarget = event.currentTarget;
       const modalName = currentTarget.getAttribute('data-modal-open');
       const dialog = document.querySelector(`[id="${modalName}"]`);
 
